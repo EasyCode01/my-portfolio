@@ -5,7 +5,7 @@ import chevronDown from "./chevron-down-icon.svg";
 import chevronLeft from "./chevron-left-icon.svg";
 import chevronRight from "./chevron-right-icon.svg";
 import chevronUp from "./chevron-up-icon.svg";
-import closeMenu from "./close-me-icon.svg";
+import closeMenu from "./close-menu-icon.svg";
 import contact from "./contact-icon.svg";
 import css from "./css-icon.svg";
 import design from "./design-icon.svg";
