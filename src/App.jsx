@@ -1,11 +1,10 @@
 import React from "react";
-import closeIcon from "./assests/icons/close-menu-icon.svg";
-import { aboutMe } from "./assests/icons";
+import Home from "./pages/homepage/Home";
 
 const App = () => {
   return (
-    <div>
-      <img src={aboutMe} alt="" />
+    <div className="app">
+      <Home />
     </div>
   );
 };

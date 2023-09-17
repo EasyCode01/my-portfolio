@@ -1,0 +1,147 @@
+.sidebar {
+  width: 105px;
+  height: 100vh;
+  box-shadow: 3px 1px 6px var(--box-shadow);
+  overflow: hidden;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 400ms ease;
+  background-color: #fff;
+}
+
+.name-holder {
+  width: 100%;
+  height: 60px;
+  background-color: var(--cta-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color-1);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.front-name {
+  transition: all 400ms ease;
+  position: absolute;
+  font-weight: 700;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.back-name {
+  position: absolute;
+  transition: all 400ms ease;
+  font-weight: 700;
+  font-size: 1rem;
+  transform: translateX(200%);
+}
+
+.name-holder:hover .front-name {
+  transform: translateX(-200%);
+}
+
+.name-holder:hover .back-name {
+  transform: translateX(0);
+}
+
+.sidebar-icon-list {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid var(--sidelink-border-color);
+  transition: all 400ms ease;
+}
+
+.sidebar-icon-list:hover {
+  color: var(--cta-color) !important;
+}
+
+.sidebar-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.active-sidelink {
+  color: var(--cta-color);
+}
+
+.sidebar-icon-list-holder {
+  position: relative;
+}
+
+.active-indicator {
+  position: absolute;
+  height: 80px;
+  width: 2px;
+  background-color: var(--cta-color);
+  top: 0;
+  right: 0;
+  transition: all 500ms ease;
+}
+
+/* Nav */
+
+.navbar {
+  height: 60px;
+  width: 100%;
+  box-shadow: 1px 3px 6px var(--box-shadow);
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 98;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  display: flex;
+  transition: all 400ms ease;
+  transform: translateY(-200%);
+  overflow: hidden;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-logo {
+  width: 105px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cta-color);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.nav-logo-back {
+  transform: translateX(200%);
+}
+
+.nav-logo:hover .nav-logo-front {
+  transform: translateX(-200%);
+}
+
+.nav-logo:hover .nav-logo-back {
+  transform: translateX(0);
+}
+
+.nav-icon {
+  font-size: 2.5rem !important;
+  cursor: pointer;
+  background-color: var(--cta-color);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+}
