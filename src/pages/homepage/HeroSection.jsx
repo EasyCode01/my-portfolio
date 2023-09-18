@@ -1,10 +1,9 @@
 import React from "react";
 import "./style.css";
 import { heroPage } from "../../constants";
-import { chevronDown, moon, sun } from "../../assests/icons";
+import { chevronDown, sunIcon, moonIcon } from "../../constants";
 import { useAppContext } from "../../context/context";
 import { TOGGLE_LIGHT } from "../../context/reducer";
-import { Icon } from "@iconify/react";
 const HeroSection = () => {
   let { left, right } = heroPage;
   let { dispatch, state } = useAppContext();
@@ -53,7 +52,9 @@ const HeroSection = () => {
       </div>
 
       <div className="scroll-down">
-        <img className="scroll-down-icon" src={chevronDown} alt="" width={24} />
+        <span style={{ width: "24px" }} className="scroll-down-icon">
+          {chevronDown}
+        </span>
       </div>
 
       <div className="toggle-mode">
@@ -67,9 +68,9 @@ const HeroSection = () => {
           }
         >
           {isLightTheme ? (
-            <Icon icon="bi:moon" width={24} />
+            <span style={{ width: "24px", height: "24px" }}>{moonIcon}</span>
           ) : (
-            <Icon icon="charm:sun" width={24} />
+            <span style={{ width: "24px", height: "24px" }}>{sunIcon}</span>
           )}
         </span>
       </div>

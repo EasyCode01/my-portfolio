@@ -13,9 +13,10 @@ ul {
 :root {
   --main-color-1: #ffffff;
   --main-color-2: #eaedf2;
+  --text-white: #fff;
   --big-heading-color: #090a0c;
   --box-shadow: #090a0c2e;
-  --main-text-color: #5a5a64;
+  --main-text-color: #393a3d;
   --sidelink-border-color: #5a5a641d;
   --cta-color: #d9832e;
 
@@ -24,19 +25,8 @@ ul {
 }
 
 .app {
-  width: 100% !important;
-  border: 1px solid blue;
+  width: 100%;
 }
-
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto serif", "sans-serif";
-  font-weight: 700;
-} */
 
 p,
 span {
@@ -53,7 +43,7 @@ img {
 
 .name-title {
   font-family: "Roboto serif", "sans-serif";
-  font-weight: 700;
+  font-weight: 500;
   font-size: 3rem;
   letter-spacing: 2px;
 }
@@ -126,8 +116,6 @@ img {
   border-color: var(--big-heading-color);
 }
 
-/* light mode */
-
 /* media query */
 @media (max-width: 1100px) {
   .global-padding {
@@ -194,5 +182,22 @@ img {
 
   .button-holder button {
     align-self: flex-start;
+    width: 150px;
+  }
+
+  .hero-right img {
+    display: none;
+  }
+
+  .name-title {
+    font-size: 1.8rem;
+  }
+
+  .label {
+    font-size: 1.15rem;
+  }
+
+  .text {
+    text-align: justify;
   }
 }

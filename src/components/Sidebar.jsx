@@ -5,21 +5,22 @@ import { useAppContext } from "../context/context";
 
 const Sidebar = () => {
   let { state } = useAppContext();
-  let { isLightTheme, light, openMenu } = state;
+  let { isLightTheme, light, openMenu, dark } = state;
 
   const [currentIndicator, setCurrentIndicator] = useState(0);
 
   const changeCurrentIndicator = (idx) => {
     setCurrentIndicator(idx);
   };
+
   return (
     <nav
-      style={{ background: isLightTheme ? "#fff" : "#1f2937" }}
+      style={{ background: isLightTheme ? light.whiteColor : dark.darkColor }}
       className={`sidebar ${openMenu ? "openSideMenu" : "closeSideMenu"}`}
     >
       <div>
         <div
-          style={{ background: isLightTheme ? light.cta : "#1f2937" }}
+          style={{ background: isLightTheme ? light.cta : dark.darkColor }}
           className="name-holder"
         >
           <p className="front-name">Ezekiel</p>
@@ -39,10 +40,26 @@ const Sidebar = () => {
                 currentIndicator === idx ? "active-sidelink" : ""
               }`}
             >
-              <span className="sidebar-icon">
-                <img src={link.icon} alt="sidebar-icon" width={26} />
+              <span
+                style={{
+                  color: isLightTheme ? "" : light.mainColor1,
+                  width: "24px",
+                  height: "24px",
+                }}
+                className="sidebar-icon"
+              >
+                {link.icon}
               </span>
-              <span className="sidebar-label">{link.label}</span>
+              <span
+                style={{
+                  color: isLightTheme ? "" : light.mainColor1,
+                }}
+                className={`sidebar-label ${
+                  currentIndicator === idx ? "active-sidelink" : ""
+                }`}
+              >
+                {link.label}
+              </span>
             </li>
           ))}
         </ul>
