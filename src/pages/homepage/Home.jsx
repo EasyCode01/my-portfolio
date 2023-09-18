@@ -12,11 +12,11 @@ const Home = () => {
   return (
     <div
       style={{
-        background: theme?.mainColor1,
+        background: theme.mainColor1,
         transition: "all 400ms ease",
         width: "100%",
-        border: "1px solid red",
       }}
+      className="home"
     >
       <Navbar />
       <Sidebar />

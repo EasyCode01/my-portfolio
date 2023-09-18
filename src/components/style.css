@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   transition: all 400ms ease;
-  background-color: #fff;
+  background-color: var(--text-white);
 }
 
 .name-holder {
@@ -22,6 +22,7 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  transition: all 400ms ease;
 }
 
 .front-name {
@@ -54,6 +55,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
   align-items: center;
   cursor: pointer;
   border-bottom: 1px solid var(--sidelink-border-color);
@@ -65,13 +67,14 @@
 }
 
 .sidebar-label {
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-weight: 500;
+  font-size: 0.8rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .active-sidelink {
-  color: var(--cta-color);
+  color: var(--cta-color) !important;
 }
 
 .sidebar-icon-list-holder {
@@ -85,7 +88,7 @@
   background-color: var(--cta-color);
   top: 0;
   right: 0;
-  transition: all 500ms ease;
+  transition: all 400ms ease;
 }
 
 /* Nav */
@@ -94,7 +97,7 @@
   height: 60px;
   width: 100%;
   box-shadow: 1px 3px 6px var(--box-shadow);
-  background-color: #fff;
+  background-color: var(--text-white);
   position: fixed;
   top: 0;
   z-index: 98;
@@ -138,10 +141,8 @@
 }
 
 .nav-icon {
-  font-size: 2.5rem !important;
   cursor: pointer;
   background-color: var(--cta-color);
-  color: #fff;
-  width: 32px;
-  height: 32px;
+  color: var(--text-white);
+  font-size: 2rem;
 }

@@ -9,6 +9,7 @@ const initialState = {
   light: {
     mainColor1: "#fff",
     mainColor2: "#eaedf2",
+    whiteColor: "#fff",
     bigHeading: "#090a0c",
     mainText: "#5a5a64",
     cta: "#d9832e",
@@ -18,6 +19,7 @@ const initialState = {
   dark: {
     mainColor1: "#1F2937",
     mainColor2: "#1f2937",
+    darkColor: "#1f2937",
     bigHeading: "#fff",
     mainText: "#fff",
   },
