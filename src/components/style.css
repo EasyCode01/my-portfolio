@@ -146,3 +146,23 @@
   color: var(--text-white);
   font-size: 2rem;
 }
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-head-title {
+  position: relative;
+}
+
+.section-head-title::after {
+  content: "";
+  position: absolute;
+  background-color: var(--cta-color);
+  width: 50px;
+  height: 2.5px;
+  bottom: -10px;
+  left: 0;
+}

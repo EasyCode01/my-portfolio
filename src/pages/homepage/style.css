@@ -4,18 +4,15 @@
 }
 
 .hero-main {
-  margin-left: 105px;
-  width: calc(100% - 105px);
+  width: 100%;
 }
 
 .hero {
   height: 100vh;
   display: flex;
-  width: 100%;
-}
-
-.global-padding {
-  padding: 0 2rem;
+  width: calc(100% - 105px);
+  margin-left: 105px;
+  position: relative;
 }
 
 .hero-left {
@@ -23,7 +20,6 @@
   background-color: var(--bg-hero-left);
   display: flex;
   align-items: center;
-  position: relative;
   transition: all 400ms ease;
 }
 
@@ -40,7 +36,6 @@
   display: flex;
   justify-content: center;
   transition: all 400ms ease;
-  position: relative;
 }
 
 .hero-right > div {
@@ -106,4 +101,105 @@
   top: 20px;
   right: 4%;
   cursor: pointer;
+}
+
+/* About me */
+
+.about-me {
+  background-color: var(--main-color-2);
+  width: calc(100% - 105px);
+  margin-left: 105px;
+}
+
+.about-me-content {
+  margin-top: 50px;
+  display: flex;
+}
+
+.about-me-content-left {
+  flex: 1;
+}
+
+.about-me-content-right {
+  flex: 1;
+  padding-top: 30px;
+}
+
+.about-me-content-right > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-me-frame {
+  height: 80vh;
+  border: 15px solid var(--text-white);
+  border-radius: 4px;
+  background-color: var(--about-me-pic-bg);
+  width: 450px;
+  max-width: 100%;
+  position: relative;
+}
+
+.about-me-frame img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.about-me-frame .social-media-links {
+  width: 50px;
+  height: 180;
+  background-color: var(--text-white);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 20px;
+}
+
+.about-me-frame .social-media-links li {
+  width: 35px;
+  height: 35px;
+  background-color: var(--cta-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 400ms ease;
+}
+
+.about-me-frame .social-media-links li:hover {
+  background-color: var(--big-heading-color);
+}
+
+.about-me-frame .social-media-links li svg {
+  color: var(--text-white);
+}
+
+.about-me-content-right .personal-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.about-me-content-right .personal-details ul li {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.about-me-content-right .personal-details ul li .field {
+  display: inline-block;
+  border-right: 1px solid #ccc;
+  font-size: 0.9rem;
+  width: 90px;
+  font-weight: 600;
+}
+
+.about-me-content-right .personal-details ul li .value {
+  padding-left: 10px;
+  font-size: 0.8rem;
 }

@@ -4,6 +4,7 @@ import HeroSection from "./HeroSection";
 import "./style.css";
 import { useAppContext } from "../../context/context";
 import Navbar from "../../components/Navbar";
+import AboutMe from "./AboutMe";
 
 const Home = () => {
   let { state } = useAppContext();
@@ -22,6 +23,7 @@ const Home = () => {
       <Sidebar />
       <main className="hero-main">
         <HeroSection />
+        <AboutMe />
       </main>
       ;
     </div>
