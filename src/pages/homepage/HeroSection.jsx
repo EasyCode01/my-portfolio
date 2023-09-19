@@ -4,6 +4,7 @@ import { heroPage } from "../../constants";
 import { chevronDown, sunIcon, moonIcon } from "../../constants";
 import { useAppContext } from "../../context/context";
 import { TOGGLE_LIGHT } from "../../context/reducer";
+
 const HeroSection = () => {
   let { left, right } = heroPage;
   let { dispatch, state } = useAppContext();

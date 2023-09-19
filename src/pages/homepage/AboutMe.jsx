@@ -52,8 +52,8 @@ const AboutMe = () => {
                   }}
                   className="small-label"
                 >
-                  A FRONTEND <span style={{ color: "#d9832e" }}> ENGINEER</span>{" "}
-                  based in <span style={{ color: "#d9832e" }}>Lagos</span>
+                  A FRONTEND <span style={{ color: light.cta }}> ENGINEER</span>{" "}
+                  based in <span style={{ color: light.cta }}>Lagos</span>
                 </div>
               </div>
 

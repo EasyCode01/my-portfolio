@@ -2,7 +2,7 @@ import React from "react";
 import { useAppContext } from "../context/context";
 
 const SectionHead = ({ mainTitle }) => {
-  let { dispatch, state } = useAppContext();
+  let { state } = useAppContext();
   let { isLightTheme, light, dark } = state;
   return (
     <div className="section-head">
