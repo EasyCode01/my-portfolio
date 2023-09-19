@@ -166,3 +166,49 @@
   bottom: -10px;
   left: 0;
 }
+
+.my-skills {
+  width: calc(100% - 105px);
+  margin-left: 105px;
+  background-color: var(--main-color-1);
+}
+
+.my-skills .technologies {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.my-skills .technologies .technology {
+  transition: all 400ms ease;
+}
+
+.my-skills .technologies .technology:hover {
+  transform: scale(0.9);
+}
+
+.card {
+  border-radius: 8px;
+  background-color: var(--main-color-1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dotted var(--cta-color);
+}
+
+.project {
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 1px 3px 6px var(--box-shadow);
+}

@@ -55,7 +55,6 @@ img {
   font-weight: 700;
   font-size: 2.2rem;
   text-transform: uppercase;
-  /* display: inline-block; */
 }
 
 .label {
@@ -142,7 +141,7 @@ img {
 }
 
 .section-container {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -189,7 +188,10 @@ img {
   }
 
   .about-me,
-  .hero {
+  .hero,
+  .my-skills,
+  .services,
+  .portfolio {
     margin-left: 0;
     width: 100%;
   }
@@ -212,6 +214,14 @@ img {
     max-width: 90%;
     flex: 2;
     height: 80vh;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -269,5 +279,13 @@ img {
 
   .about-me-frame {
     height: 50vh;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .project-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -114,6 +114,7 @@
 .about-me-content {
   margin-top: 50px;
   display: flex;
+  gap: 20px;
 }
 
 .about-me-content-left {
@@ -137,7 +138,7 @@
   border-radius: 4px;
   background-color: var(--about-me-pic-bg);
   max-width: 450px;
-  max-width: 100%;
+
   position: relative;
 }
 
@@ -202,4 +203,33 @@
 .about-me-content-right .personal-details ul li .value {
   padding-left: 10px;
   font-size: 0.8rem;
+}
+
+.services {
+  min-height: 100vh;
+  width: calc(100% - 105px);
+  margin-left: 105px;
+  background-color: var(--main-color-2);
+}
+
+.card-container {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Portfolio */
+
+.portfolio {
+  background-color: var(--main-color-1);
+  width: calc(100% - 105px);
+  margin-left: 105px;
+}
+
+.project-container {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }

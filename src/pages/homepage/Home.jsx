@@ -5,6 +5,9 @@ import "./style.css";
 import { useAppContext } from "../../context/context";
 import Navbar from "../../components/Navbar";
 import AboutMe from "./AboutMe";
+import MySkills from "../../components/MySkills";
+import Services from "./Services";
+import Portfolio from "./Portfolio";
 
 const Home = () => {
   let { state } = useAppContext();
@@ -24,6 +27,9 @@ const Home = () => {
       <main className="hero-main">
         <HeroSection />
         <AboutMe />
+        <MySkills />
+        <Services />
+        <Portfolio />
       </main>
       ;
     </div>
