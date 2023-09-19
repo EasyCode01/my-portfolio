@@ -226,6 +226,10 @@ img {
     width: 150px;
   }
 
+  .hero {
+    height: 90vh;
+  }
+
   .hero-right img {
     display: none;
   }
@@ -238,8 +242,14 @@ img {
     font-size: 1.15rem;
   }
 
+  .small-label,
+  .small-text {
+    font-size: 0.8rem;
+  }
+
   .text {
     text-align: justify;
+    font-size: 0.8rem;
   }
 
   .about-me-content-left {
@@ -255,5 +265,9 @@ img {
   .section-head-label {
     font-size: 0.8rem;
     word-spacing: 1px;
+  }
+
+  .about-me-frame {
+    height: 50vh;
   }
 }
