@@ -18,6 +18,8 @@ ul {
   --box-shadow: #090a0c2e;
   --main-text-color: #393a3d;
   --sidelink-border-color: #5a5a641d;
+  --section-label-color: #5a5a64;
+  --about-me-pic-bg: #e3e3e3;
   --cta-color: #d9832e;
 
   --bg-hero-right: #fbfbfb;
@@ -53,19 +55,31 @@ img {
   font-weight: 700;
   font-size: 2.2rem;
   text-transform: uppercase;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .label {
   font-family: "Roboto serif", "sans-serif";
-  font-weight: 500;
-  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .small-label {
   font-family: "Merriweather", "Sans-serif";
   font-weight: 500;
   font-size: 1.1rem;
+}
+
+.section-head-label {
+  font-family: "Merriweather", "sans-serif";
+  font-weight: 300;
+  color: var(--section-label-color);
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  line-height: 1.5;
 }
 
 .text {
@@ -116,10 +130,31 @@ img {
   border-color: var(--big-heading-color);
 }
 
+/* padding */
+.padding-x {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.padding-y {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
 /* media query */
 @media (max-width: 1100px) {
-  .global-padding {
-    padding: 0;
+  .padding-x {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .name-title {
@@ -152,13 +187,19 @@ img {
   .toggle-mode {
     display: none;
   }
+
+  .about-me,
+  .hero {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .about-me-content {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 851px) {
-  .hero-main {
-    padding-left: 30px;
-  }
-
   .hero-left {
     position: absolute;
     top: 45%;
@@ -199,5 +240,20 @@ img {
 
   .text {
     text-align: justify;
+  }
+
+  .about-me-content-left {
+    align-self: center;
+    justify-self: center;
+    flex: 1;
+  }
+
+  .about-me-content-right .personal-details {
+    flex-direction: column;
+  }
+
+  .section-head-label {
+    font-size: 0.8rem;
+    word-spacing: 1px;
   }
 }
