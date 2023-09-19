@@ -136,7 +136,7 @@
   border: 15px solid var(--text-white);
   border-radius: 4px;
   background-color: var(--about-me-pic-bg);
-  width: 450px;
+  max-width: 450px;
   max-width: 100%;
   position: relative;
 }

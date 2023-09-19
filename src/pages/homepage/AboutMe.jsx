@@ -20,7 +20,11 @@ const AboutMe = () => {
         <div className="about-me-content">
           <div className="about-me-content-left">
             <div className="about-me-frame">
-              <img src={myAboutImage2} alt="my about image" />
+              <img
+                style={{ maxWidth: "100%" }}
+                src={myAboutImage2}
+                alt="my about image"
+              />
               <ul className="social-media-links">
                 {socialMediaIcons.map((icon, idx) => (
                   <li className="" key={idx} title={icon.title}>
