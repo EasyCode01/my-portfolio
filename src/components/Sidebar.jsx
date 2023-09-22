@@ -2,15 +2,21 @@ import React, { useState } from "react";
 import "./style.css";
 import { sideLinks } from "../constants";
 import { useAppContext } from "../context/context";
+import { blogLink } from "../constants";
+import { SET_ACTIVE_SECTION } from "../context/reducer";
 
 const Sidebar = () => {
-  let { state } = useAppContext();
-  let { isLightTheme, light, openMenu, dark } = state;
+  let { dispatch, state } = useAppContext();
+  let { isLightTheme, light, openMenu, dark, activeSection } = state;
 
   const [currentIndicator, setCurrentIndicator] = useState(0);
 
-  const changeCurrentIndicator = (idx) => {
+  const changeCurrentIndicator = (idx, section) => {
     setCurrentIndicator(idx);
+    dispatch({
+      type: SET_ACTIVE_SECTION,
+      payload: section,
+    });
   };
 
   return (
@@ -29,13 +35,15 @@ const Sidebar = () => {
 
         <ul className="sidebar-icon-list-holder">
           <div
-            style={{ transform: `translateY(${currentIndicator * 80}px)` }}
+            style={{ transform: `translateY(${currentIndicator * 70}px)` }}
             className={`active-indicator`}
           ></div>
           {sideLinks.map((link, idx) => (
-            <li
+            <a
+              href={link.activeSection}
+              style={{ color: dark.mainColor1 }}
               key={link.label}
-              onClick={() => changeCurrentIndicator(idx)}
+              onClick={() => changeCurrentIndicator(idx, link.activeSection)}
               className={`sidebar-icon-list ${
                 currentIndicator === idx ? "active-sidelink" : ""
               }`}
@@ -60,8 +68,44 @@ const Sidebar = () => {
               >
                 {link.label}
               </span>
-            </li>
+            </a>
           ))}
+        </ul>
+
+        <ul
+          style={{
+            justifySelf: "flex-end",
+          }}
+          className="blog-icon"
+        >
+          <li
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 15,
+              alignItems: "center",
+              cursor: "pointer",
+            }}
+          >
+            <span
+              style={{
+                color: isLightTheme ? "" : light.mainColor1,
+                width: "24px",
+                height: "24px",
+              }}
+              className="sidebar-icon"
+            >
+              {blogLink.icon}
+            </span>
+            <span
+              style={{
+                color: isLightTheme ? "" : light.mainColor1,
+              }}
+              className={`sidebar-label `}
+            >
+              {blogLink.label}
+            </span>
+          </li>
         </ul>
       </div>
     </nav>

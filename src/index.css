@@ -6,6 +6,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 ul {
   list-style-type: none;
 }
@@ -19,6 +28,7 @@ ul {
   --main-text-color: #393a3d;
   --sidelink-border-color: #5a5a641d;
   --section-label-color: #5a5a64;
+  --project-text-color: #767676;
   --about-me-pic-bg: #e3e3e3;
   --cta-color: #d9832e;
 
@@ -156,6 +166,10 @@ img {
     padding-right: 0;
   }
 
+  .section-container {
+    width: 90%;
+  }
+
   .name-title {
     font-size: 2rem;
   }
@@ -191,12 +205,22 @@ img {
   .hero,
   .my-skills,
   .services,
-  .portfolio {
+  .portfolio,
+  .contact,
+  .footer {
     margin-left: 0;
     width: 100%;
   }
 
   .about-me-content {
+    flex-direction: column;
+  }
+
+  .contact-inner-content {
+    flex-direction: column;
+  }
+
+  .contact-form form .text-field {
     flex-direction: column;
   }
 }
@@ -222,6 +246,12 @@ img {
 
   .project-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
 

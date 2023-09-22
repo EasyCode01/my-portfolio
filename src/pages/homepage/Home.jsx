@@ -8,6 +8,8 @@ import AboutMe from "./AboutMe";
 import MySkills from "../../components/MySkills";
 import Services from "./Services";
 import Portfolio from "./Portfolio";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 const Home = () => {
   let { state } = useAppContext();
@@ -30,6 +32,8 @@ const Home = () => {
         <MySkills />
         <Services />
         <Portfolio />
+        <Contact />
+        <Footer />
       </main>
       ;
     </div>

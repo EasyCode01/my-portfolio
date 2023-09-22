@@ -4,7 +4,9 @@ import { reducer } from "./reducer";
 const Context = createContext();
 
 const initialState = {
-  isLightTheme: true,
+  isLightTheme: localStorage.getItem("isLightTheme")
+    ? JSON.parse(localStorage.getItem("isLightTheme"))
+    : true,
   openMenu: false,
   light: {
     mainColor1: "#fff",
@@ -15,6 +17,7 @@ const initialState = {
     cta: "#d9832e",
     bgHeroRight: "#fbfbfb",
     bgHeroleft: "#fcfcfc",
+    projectTextColor: "#fff",
   },
   dark: {
     mainColor1: "#1F2937",
@@ -22,12 +25,13 @@ const initialState = {
     darkColor: "#1f2937",
     bigHeading: "#fff",
     mainText: "#fff",
+    projectTextColor: "#767676",
   },
+  activeSection: "home",
 };
 
 export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state);
 
   return (
     <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>

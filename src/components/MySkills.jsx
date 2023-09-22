@@ -18,7 +18,7 @@ const MySkills = () => {
           <div
             style={{
               color: isLightTheme ? dark.mainColor1 : light.mainColor1,
-              marginTop: "40px",
+              marginTop: "20px",
             }}
             className="label"
           >
@@ -27,7 +27,7 @@ const MySkills = () => {
           <p
             style={{
               color: isLightTheme ? dark.mainColor1 : light.mainColor1,
-              marginTop: "40px",
+              marginTop: "20px",
             }}
             className="text"
           >

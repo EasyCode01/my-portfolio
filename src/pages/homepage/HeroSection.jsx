@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import { heroPage } from "../../constants";
 import { chevronDown, sunIcon, moonIcon } from "../../constants";
@@ -10,6 +10,17 @@ const HeroSection = () => {
   let { dispatch, state } = useAppContext();
   let { isLightTheme, light, dark } = state;
   const theme = isLightTheme ? light : dark;
+
+  useEffect(() => {
+    localStorage.setItem("isLightTheme", JSON.stringify(isLightTheme));
+  }, [isLightTheme]);
+
+  const toogleLightTheme = () => {
+    dispatch({
+      type: TOGGLE_LIGHT,
+      payload: !isLightTheme,
+    });
+  };
 
   return (
     <div className="hero">
@@ -38,8 +49,12 @@ const HeroSection = () => {
               {left.bio}
             </p>
             <div className="button-holder">
-              <button className="btn-fill">{left.myWorkBtn}</button>
-              <button className="btn">{left.hireMeBtn}</button>
+              <a href="#portfolio">
+                <button className="btn-fill">{left.myWorkBtn}</button>
+              </a>
+              <a href="#contact">
+                <button className="btn">{left.hireMeBtn}</button>
+              </a>
             </div>
           </div>
         </div>
@@ -53,21 +68,16 @@ const HeroSection = () => {
           <img src={right.img} alt="" />
         </div>
 
-        <div className="scroll-down">
+        <a href="#about-me" className="scroll-down">
           <span style={{ width: "24px" }} className="scroll-down-icon">
             {chevronDown}
           </span>
-        </div>
+        </a>
 
         <div className="toggle-mode">
           <span
             style={{ color: isLightTheme ? dark.mainColor1 : light.mainColor1 }}
-            onClick={() =>
-              dispatch({
-                type: TOGGLE_LIGHT,
-                payload: !isLightTheme,
-              })
-            }
+            onClick={toogleLightTheme}
           >
             {isLightTheme ? (
               <span style={{ width: "24px", height: "24px" }}>{moonIcon}</span>

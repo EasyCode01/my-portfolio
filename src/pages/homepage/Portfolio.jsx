@@ -2,6 +2,7 @@ import React from "react";
 import SectionHead from "../../components/SectionHead";
 import { useAppContext } from "../../context/context";
 import Project from "../../components/Project";
+import { projects } from "../../constants";
 
 const Portfolio = () => {
   let { state } = useAppContext();
@@ -11,6 +12,7 @@ const Portfolio = () => {
       style={{
         background: isLightTheme ? light.mainColor1 : dark.mainColor1,
       }}
+      id="portfolio"
       className="portfolio padding-y"
     >
       <div className="section-container">
@@ -27,12 +29,9 @@ const Portfolio = () => {
             Each project is a unique piece of development
           </p>
           <div className="project-container">
-            <Project />
-            <Project />
-            <Project />
-            <Project />
-            <Project />
-            <Project />
+            {projects.map((project, idx) => (
+              <Project key={idx} item={project} />
+            ))}
           </div>
         </div>
       </div>

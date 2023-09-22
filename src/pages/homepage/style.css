@@ -233,3 +233,127 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+
+.contact {
+  width: calc(100% - 105px);
+  margin-left: 105px;
+  background-color: var(--main-color-2);
+}
+
+.contact-inner-content {
+  margin-top: 50px;
+  display: flex;
+  gap: 40px;
+}
+
+.contact-form {
+  flex: 2;
+  padding: 35px;
+  background-color: var(--main-color-1);
+  border-radius: 8px;
+  box-shadow: 3px 5px 6px var(--box-shadow);
+}
+
+.contact-address-phone {
+  flex: 1;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form form .text-field {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+
+.contact-form form .text-field input,
+.contact-form form .text-field textarea {
+  flex: 1;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 2px solid var(--about-me-pic-bg);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 500ms ease;
+  position: relative;
+  background: none;
+}
+
+.contact-form form .text-field input:focus,
+.contact-form form .text-field textarea:focus {
+  outline: none;
+}
+
+.contact-form form .text-field::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--cta-color);
+  height: 2px;
+  transition: all 400ms ease;
+}
+
+.contact-form form .text-field input:focus,
+.contact-form form .text-field textarea:focus {
+  border-color: var(--cta-color);
+}
+
+textarea {
+  height: 100px;
+}
+
+.contact-address-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-address-phone .contact-add-phone {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  background-color: var(--main-color-1);
+  box-shadow: 2px 4px 6px var(--box-shadow);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cta-color);
+  color: var(--text-white);
+}
+
+.contact-address-phone .contact-add-phone .contact-details p:first-child {
+  margin-bottom: 15px;
+}
+
+.footer {
+  margin-left: 105px;
+  background-color: var(--big-heading-color);
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.footer .footer-name {
+  color: var(--section-label-color);
+}
+
+.footer .copy-right {
+  color: var(--section-label-color);
+  display: flex;
+  align-items: center;
+}
