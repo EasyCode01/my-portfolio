@@ -11,6 +11,7 @@ const Services = () => {
     <section
       style={{ background: isLightTheme ? light.mainColor2 : dark.mainColor1 }}
       className="services padding-y"
+      id="services"
     >
       <div className="section-container">
         <SectionHead mainTitle="Services" />

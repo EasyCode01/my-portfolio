@@ -1,8 +1,9 @@
-import { heroImg2 } from "../assests/images";
+import { heroImg2, youtubeClone } from "../assests/images";
 
 export const sideLinks = [
   {
-    label: "Home",
+    label: "home",
+    activeSection: "#",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +24,8 @@ export const sideLinks = [
     activeLink: "active-sidelink",
   },
   {
-    label: "About me",
+    label: "about-me",
+    activeSection: "#about-me",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -37,10 +39,10 @@ export const sideLinks = [
         />
       </svg>
     ),
-    activeLink: "",
   },
   {
-    label: "Services",
+    label: "services",
+    activeSection: "#services",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -54,10 +56,10 @@ export const sideLinks = [
         />
       </svg>
     ),
-    activeLink: "",
   },
   {
-    label: "Portfolio",
+    label: "portfolio",
+    activeSection: "#portfolio",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -71,27 +73,11 @@ export const sideLinks = [
         />
       </svg>
     ),
-    activeLink: "",
   },
+
   {
-    label: "Blog",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-      >
-        <path
-          fill="currentColor"
-          d="M14.52 4.01a.507.507 0 0 0-.52.51V6.5c0 .28.22.5.5.5v.02c6.23.24 11.24 5.25 11.48 11.48H26c0 .28.22.5.5.5h1.98c.29 0 .52-.24.51-.52c-.27-7.86-6.61-14.2-14.47-14.47zm0 5a.514.514 0 0 0-.52.51v1.98c0 .28.22.5.5.5v.03c3.47.23 6.24 3 6.47 6.47H21c0 .28.22.5.5.5h1.98c.28 0 .52-.24.51-.52c-.27-5.1-4.37-9.2-9.47-9.47zM5.5 10c-.28 0-.5.22-.5.5v11c0 3.58 2.92 6.5 6.5 6.5s6.5-2.92 6.5-6.5s-2.92-6.5-6.5-6.5c-.28 0-.5.22-.5.5v3c0 .28.22.5.5.5a2.5 2.5 0 0 1 0 5A2.5 2.5 0 0 1 9 21.5v-11c0-.28-.22-.5-.5-.5h-3z"
-        />
-      </svg>
-    ),
-    activeLink: "",
-  },
-  {
-    label: "Contact",
+    label: "contact",
+    activeSection: "#contact",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -105,9 +91,26 @@ export const sideLinks = [
         />
       </svg>
     ),
-    activeLink: "",
   },
 ];
+
+export const blogLink = {
+  label: "Blog",
+  icon: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+    >
+      <path
+        fill="currentColor"
+        d="M14.52 4.01a.507.507 0 0 0-.52.51V6.5c0 .28.22.5.5.5v.02c6.23.24 11.24 5.25 11.48 11.48H26c0 .28.22.5.5.5h1.98c.29 0 .52-.24.51-.52c-.27-7.86-6.61-14.2-14.47-14.47zm0 5a.514.514 0 0 0-.52.51v1.98c0 .28.22.5.5.5v.03c3.47.23 6.24 3 6.47 6.47H21c0 .28.22.5.5.5h1.98c.28 0 .52-.24.51-.52c-.27-5.1-4.37-9.2-9.47-9.47zM5.5 10c-.28 0-.5.22-.5.5v11c0 3.58 2.92 6.5 6.5 6.5s6.5-2.92 6.5-6.5s-2.92-6.5-6.5-6.5c-.28 0-.5.22-.5.5v3c0 .28.22.5.5.5a2.5 2.5 0 0 1 0 5A2.5 2.5 0 0 1 9 21.5v-11c0-.28-.22-.5-.5-.5h-3z"
+      />
+    </svg>
+  ),
+  activeLink: "",
+};
 
 export const heroPage = {
   left: {
@@ -210,6 +213,7 @@ export const socialMediaIcons = [
       </svg>
     ),
     title: "Github",
+    href: "https://github.com/EasyCode01",
   },
   {
     icon: (
@@ -226,22 +230,24 @@ export const socialMediaIcons = [
       </svg>
     ),
     title: "Linkedin",
+    href: "https://www.linkedin.com/in/ezekiel-oyedijo-58a9b5183/",
   },
   {
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
       >
         <path
           fill="currentColor"
-          d="M14.2 2.875A4.625 4.625 0 0 0 9.575 7.5v2.575H7.1c-.124 0-.225.1-.225.225v3.4c0 .124.1.225.225.225h2.475V20.9c0 .124.1.225.225.225h3.4c.124 0 .225-.1.225-.225v-6.975h2.497c.103 0 .193-.07.218-.17l.85-3.4a.225.225 0 0 0-.218-.28h-3.347V7.5a.775.775 0 0 1 .775-.775h2.6c.124 0 .225-.1.225-.225V3.1c0-.124-.1-.225-.225-.225h-2.6Z"
+          d="M16.8 5.7C14.4 2 9.5.9 5.7 3.2C2 5.5.8 10.5 3.2 14.2l.2.3l-.8 3l3-.8l.3.2c1.3.7 2.7 1.1 4.1 1.1c1.5 0 3-.4 4.3-1.2c3.7-2.4 4.8-7.3 2.5-11.1zm-2.1 7.7c-.4.6-.9 1-1.6 1.1c-.4 0-.9.2-2.9-.6c-1.7-.8-3.1-2.1-4.1-3.6c-.6-.7-.9-1.6-1-2.5c0-.8.3-1.5.8-2c.2-.2.4-.3.6-.3H7c.2 0 .4 0 .5.4c.2.5.7 1.7.7 1.8c.1.1.1.3 0 .4c.1.2 0 .4-.1.5c-.1.1-.2.3-.3.4c-.2.1-.3.3-.2.5c.4.6.9 1.2 1.4 1.7c.6.5 1.2.9 1.9 1.2c.2.1.4.1.5-.1s.6-.7.8-.9c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.5.3c.1.3.1.7-.1 1z"
         />
       </svg>
     ),
-    title: "Facebook",
+    title: "Whatsapp",
+    href: "https://wa.me/2347064655983",
   },
   {
     icon: (
@@ -257,7 +263,8 @@ export const socialMediaIcons = [
         />
       </svg>
     ),
-    title: "Facebook",
+    title: "Twitter",
+    href: "",
   },
 ];
 
@@ -658,13 +665,71 @@ export const services = [
   },
 ];
 
-const projects = [
+export const projects = [
   {
     name: "Youtube Clone App",
-    image: "",
+    image: youtubeClone,
     desc: "Explore and enjoy a familiar video-sharing experience with the YouTube Clone App. Watch an extensive collection of videos, discover trending content, and interact with the YouTube community.",
     techs: ["React", "Material UI"],
-    githubLink: "jdjdjdd",
-    liveDemo: "",
+    githubLink: "https://github.com/EasyCode01/Youtube-clone-app",
+    liveDemo: "https://eazzyoutube.netlify.app/",
+  },
+];
+
+export const contactDetails = [
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill="currentColor"
+          fillRule="evenodd"
+          d="M12.5 6a4.47 4.47 0 0 1-.883 2.677L8 13.5L4.383 8.677A4.5 4.5 0 1 1 12.5 6ZM14 6c0 1.34-.439 2.576-1.18 3.574L8.937 14.75L8 16l-.938-1.25L3.18 9.574A6 6 0 1 1 14 6ZM8 8a2 2 0 1 0 0-4a2 2 0 0 0 0 4Z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+    headTitle: "Address",
+    textOne: "8 Kelin close, Sangotedo Ajah Lagos",
+    textTwo: "",
+  },
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M22 3H2C.9 3 0 3.9 0 5v14c0 1.1.9 2 2 2h20c1.1 0 1.99-.9 1.99-2L24 5c0-1.1-.9-2-2-2zM8 6c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3s1.34-3 3-3zm6 12H2v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1zm3.85-4h1.39c.16 0 .3.07.4.2l1.1 1.45c.15.2.13.48-.05.65l-1.36 1.36c-.18.18-.48.2-.67.04a7.557 7.557 0 0 1-2.38-3.71a7.248 7.248 0 0 1 0-3.99a7.513 7.513 0 0 1 2.38-3.71c.2-.17.49-.14.67.04l1.36 1.36c.18.18.2.46.05.65l-1.1 1.45a.48.48 0 0 1-.4.2h-1.39c-.22.63-.35 1.3-.35 2s.13 1.38.35 2.01z"
+        />
+      </svg>
+    ),
+    headTitle: "Phone",
+    textOne: "Mobile: 07064655983",
+    textTwo: "Mobile: 08142075960",
+  },
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="currentColor"
+          d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49c-16.841 13.247-50.201 45.072-73.413 44.701c-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646c21.857 17.205 60.134 55.186 103.062 54.955c42.717.231 80.509-37.199 103.053-54.947c49.528-38.783 82.032-64.401 104.947-82.653V400H48z"
+        />
+      </svg>
+    ),
+    headTitle: "E-mail",
+    textOne: "ezekielayodele1@gmail.com",
   },
 ];

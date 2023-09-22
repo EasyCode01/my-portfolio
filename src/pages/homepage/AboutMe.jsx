@@ -28,7 +28,9 @@ const AboutMe = () => {
               <ul className="social-media-links">
                 {socialMediaIcons.map((icon, idx) => (
                   <li className="" key={idx} title={icon.title}>
-                    <span>{icon.icon}</span>
+                    <a href={icon.href} target="_blank">
+                      {icon.icon}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -167,9 +169,18 @@ const AboutMe = () => {
                 </ul>
               </div>
 
-              <button style={{ alignSelf: "flex-start" }} className="btn-fill">
-                DOWNLOAD CV
-              </button>
+              <a
+                href="https://drive.google.com/file/d/1qvtMnJ0YGQw7-lwBCxHFKhTQd4ctf0GB/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  style={{ alignSelf: "flex-start" }}
+                  className="btn-fill"
+                >
+                  read cv
+                </button>
+              </a>
             </div>
           </div>
         </div>
