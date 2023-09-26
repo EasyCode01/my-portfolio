@@ -116,8 +116,8 @@ export const heroPage = {
   left: {
     hello: "Hello there...",
     name: "Ezekiel Oyedijo",
-    passion: "I Am Passionate Developer",
-    bio: "The namics of how users interact with interactive elements within a user interface flow chart based on container proportion.",
+    passion: "I Am passionate",
+    bio: "a React developer passionate about creating seamless user interfaces. Let's build outstanding web experiences together!.",
     myWorkBtn: "My Work",
     hireMeBtn: "Hire Me",
   },

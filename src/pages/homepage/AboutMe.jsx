@@ -169,18 +169,29 @@ const AboutMe = () => {
                 </ul>
               </div>
 
-              <a
-                href="https://drive.google.com/file/d/1qvtMnJ0YGQw7-lwBCxHFKhTQd4ctf0GB/view?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  style={{ alignSelf: "flex-start" }}
-                  className="btn-fill"
+              <div className="about-me-cta">
+                <a
+                  href="https://drive.google.com/file/d/1qvtMnJ0YGQw7-lwBCxHFKhTQd4ctf0GB/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  read cv
-                </button>
-              </a>
+                  <button style={{ alignSelf: "flex-start" }} className="btn">
+                    read cv
+                  </button>
+                </a>
+                <a
+                  href="mailto:ezekielayodele1@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button
+                    style={{ alignSelf: "flex-start" }}
+                    className="btn-fill"
+                  >
+                    Get in Touch
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -14,14 +14,14 @@ const SectionHead = ({ mainTitle }) => {
       >
         {mainTitle}
       </h2>
-      <p
+      <h4
         style={{
           color: isLightTheme ? dark.mainColor1 : light.mainColor1,
         }}
         className="section-head-label"
       >
-        FRONTEND ENGINEER BASED IN LAGOS
-      </p>
+        A REACT DEVELOPER BASED IN LAGOS
+      </h4>
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Contact = () => {
 
         <div className="contact-inner-content">
           <div className="contact-form">
-            <form>
+            <form action="https://formspree.io/f/moqokgea" method="POST">
               <h2 style={{ marginBottom: 15 }} className="small-label">
                 SAY SOMETHING
               </h2>
@@ -42,7 +42,7 @@ const Contact = () => {
 
               <div className="text-field">
                 <textarea
-                  name="your message"
+                  name="Message"
                   cols="30"
                   rows="10"
                   placeholder="Your message *"

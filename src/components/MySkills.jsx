@@ -31,8 +31,8 @@ const MySkills = () => {
             }}
             className="text"
           >
-            I create web applications and websites utilizing technologies such
-            as:
+            I specialize in crafting web applications and websites using
+            cutting-edge technologies like:
           </p>
           <div className="technologies">
             {tecnologies.map((tech, idx) => (
