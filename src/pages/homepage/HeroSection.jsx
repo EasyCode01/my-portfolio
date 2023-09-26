@@ -4,6 +4,7 @@ import { heroPage } from "../../constants";
 import { chevronDown, sunIcon, moonIcon } from "../../constants";
 import { useAppContext } from "../../context/context";
 import { TOGGLE_LIGHT } from "../../context/reducer";
+import Typewriter from "../../components/Typewriter";
 
 const HeroSection = () => {
   let { left, right } = heroPage;
@@ -39,7 +40,9 @@ const HeroSection = () => {
           >
             <h6 className="small-label">{left.hello}</h6>
             <h1 className="name-title">{left.name}</h1>
-            <h3 className="label">{left.passion}</h3>
+            <h3 className="label">
+              {left.passion} <Typewriter />
+            </h3>
             <p
               style={{
                 color: theme.mainText,

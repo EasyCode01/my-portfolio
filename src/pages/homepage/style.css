@@ -205,6 +205,12 @@
   font-size: 0.8rem;
 }
 
+.about-me-cta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .services {
   min-height: 100vh;
   width: calc(100% - 105px);
