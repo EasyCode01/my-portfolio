@@ -68,7 +68,7 @@ const HeroSection = () => {
           }}
           className="hero-right"
         >
-          <img src={right.img} alt="" />
+          <img src={right.img} alt="Oyedijo Ezekiel | hero image" />
         </div>
 
         <a href="#about-me" className="scroll-down">

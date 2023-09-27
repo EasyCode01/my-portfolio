@@ -673,6 +673,7 @@ export const projects = [
     techs: ["React", "Material UI"],
     githubLink: "https://github.com/EasyCode01/Youtube-clone-app",
     liveDemo: "https://eazzyoutube.netlify.app/",
+    alt: "Youtube Clone Image",
   },
 ];
 
