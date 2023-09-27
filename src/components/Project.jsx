@@ -13,7 +13,7 @@ const Project = ({ item }) => {
       >
         {item.name}
       </div>
-      <img src={item.image} alt="" />
+      <img src={item.image} alt={item.alt} />
       <p
         style={{
           color: isLightTheme ? dark.projectTextColor : light.projectTextColor,

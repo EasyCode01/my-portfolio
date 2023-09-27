@@ -23,7 +23,7 @@ const AboutMe = () => {
               <img
                 style={{ maxWidth: "100%" }}
                 src={myAboutImage2}
-                alt="my about image"
+                alt="Oyedijo Ezekiel |my about image"
               />
               <ul className="social-media-links">
                 {socialMediaIcons.map((icon, idx) => (
